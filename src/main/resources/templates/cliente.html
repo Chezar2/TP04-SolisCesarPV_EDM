@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Tp 4</title>
+</head>
+<body>
+<h1>Formulario de Carga de Cliente tp4</h1>
+	<form id="formProducto" th:object="${unCliente}" th:action="@{/cliente/guardar}" method="post">
+		
+		<label for="nombreA">Nombre y Apellido</label> 
+			<input type="text" id="nombreApellido" th:field="*{nombreApellido}">
+		<br>
+			<label for="tipo">TipoDocumento</label> 
+			<input type="radio" name="tipo" value="DNI" id="tipo" th:field="*{tipoDocumento}">DNI
+			<input type="radio" name="tipo" value="Pasaporte" id="tipo" th:field="*{tipoDocumento}">Pasaporte
+		<br>
+			<label for="numdoc">Documento</label> 
+			<input type="number"	id="numdoc" th:field="*{nroDocumento}">
+		<br>
+			<label for="fechanac">Fecha de Nacimiento</label>			
+			<input type="date"	id="fechanac" th:field="*{fechaNacimiento}">
+		<br>
+		    <label for="fechaU">Fecha Ultima Compra</label>			
+			<input type="date"	id="fechaU" th:field="*{fechaUltimaCompra}">
+		<br>
+			<label for="email">Email</label> 
+			<input type="email" id="email" th:field="*{email}">
+		<br>
+		<label for="password">Contraseña</label> 
+			<input type="password" id="tipo" th:field="*{password}">
+		<br>
+			<label for="codigo">Cod Area</label> 
+			<input type="number" id="codigo" th:field="*{codigoAreaTelefono}">		
+		<br>
+		
+			<label for="numtel">Telefono</label> 
+			<input type="number" id="numtel" th:field="*{numTelefono}">		
+		<br>
+	   
+		
+
+
+		<div>
+			<button type="submit" value="Agregar">Agregar</button>
+		</div>
+
+	</form>
+
+<!-- ---------------------------------------------------------------- -->
+
+<h3>Lista de Clientes</h3><br>
+			<div>
+				<table border=1 style="border-collapse:collapse">
+				    <tr>
+				      <th>Nro Documento:</th>
+				      <th>Nombre y Apellido:</th>
+				      <th>FechaNac:</th>
+				      <th>Edad:</th>
+				      <th>Fecha UltimaCompra</th>
+				      <th>Tipo Documento:</th>
+				      <th>Telefono Completo:</th>
+				      <th>E-mail:</th>	
+				       <th>Datos Adicionales </th>	       
+				       			      
+				    </tr>
+					<tr th:each="cli : ${clientes}">
+						<td th:text="${cli.nroDocumento}"></td>
+						<td th:text="${cli.nombreApellido}"></td>
+						<td th:text="${cli.fechaNacimiento}"></td>
+						<td th:text="${cli.edad}"></td>
+						<td th:text="${cli.fechaUltimaCompra}"></td>
+						<td th:text="${cli.tipoDocumento}"></td>
+						<td th:text="${cli.numTelefonoCompleto}"></td>
+						<td th:text="${cli.email}"></td>		
+						<td th:text="${cli.datosAdicionales}"></td>		
+					
+					</tr>
+				</table>
+			</div>
+
+</body>
+</html>
