@@ -19,24 +19,25 @@
           </div>
           
          <div class="mb-3">
-            <label for="tipo" class="form-check-label" >TipoDocumento</label> 
-			<input type="radio" name="tipo" value="DNI" id="tipo" th:field="*{tipoDocumento}">DNI
-			<input type="radio" name="tipo" value="Pasaporte" id="tipo" th:field="*{tipoDocumento}">Pasaporte
+            <label for="tipo" class="form-check form-check-inline" >TipoDocumento</label> 
+			<input type="radio" name="tipo" value="DNI" id="tipo" th:field="*{tipoDocumento}" class="form-check-input">DNI
+			<input type="radio" name="tipo" value="Pasaporte" id="tipo" th:field="*{tipoDocumento}"class="form-check-input">Pasaporte
+		
           </div>
           
 		<div class="mb-3">
             <label for="numdoc" class="form-check-label" >Documento</label> 
-			<input type="number"	id="numdoc" th:field="*{nroDocumento}">
+			<input type="number"	id="numdoc" th:field="*{nroDocumento}"class="form-control">
          </div>
           
           <div class="mb-3">
             <label for="fechanac"class="form-check-label" >Fecha de Nacimiento</label>			
-			<input type="date"	id="fechanac" th:field="*{fechaNacimiento}">
+			<input type="date"	id="fechanac" th:field="*{fechaNacimiento}"class="form-control">
           </div>	
           
           <div class="mb-3">
   			<label for="fechanac" class="form-check-label" >Fecha de Nacimiento</label>			
-			<input type="date"	id="fechanac" th:field="*{fechaNacimiento}">
+			<input type="date"	id="fechanac" th:field="*{fechaNacimiento}"class="form-control">
           </div>
              
           <div class="mb-3">
@@ -46,17 +47,17 @@
           
           <div class="mb-3">
   			<label for="email" class="form-check-label" >Email</label> 
-			<input type="email" id="email" th:field="*{email}">
+			<input type="email" id="email" th:field="*{email}"class="form-control">
           </div>
               
           <div class="mb-3">
  			 <label for="password" class="form-check-label" >Contraseña</label> 
-			<input type="password" id="tipo" th:field="*{password}">
+			<input type="password" id="tipo" th:field="*{password}"class="form-control">
           </div>
           
           <div class="mb-3">
-  			<label for="codigo" class="form-check-label" >Cod Area</label> 
-			<select id="codigo" th:field="*{codigoAreaTelefono}">
+  			<label for="codigo" class="form-label" >Cod Area</label> 
+			<select id="codigo" th:field="*{codigoAreaTelefono}" class="form-select">
 			<option value="388">388</option>
 			<option value="351">351</option>
 			<option value="11">11</option>
@@ -67,7 +68,7 @@
 	
 		  <div class="mb-3">
 			<label for="numtel" class="form-check-label" >Telefono</label> 
-			<input type="number" id="numtel" th:field="*{numTelefono}">		
+			<input type="number" id="numtel" th:field="*{numTelefono}"class="form-control">		
 		  </div>
 	   
 
@@ -82,7 +83,7 @@
 
 <h3>Lista de Clientes</h3><br>
 			<div>
-				<table border=1 style="border-collapse:collapse">
+				<table class="table table-dark">
 				    <tr>
 				      <th>Nro Documento:</th>
 				      <th>Nombre y Apellido:</th>
