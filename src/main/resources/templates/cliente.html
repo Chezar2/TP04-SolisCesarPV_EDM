@@ -2,10 +2,10 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="UTF-8">
-<title>Tp 4</title>
+<title>Titulo de pagina de cesar</title>
 </head>
 <body>
-<h1>Formulario de Carga de Cliente tp4</h1>
+<h1>Formulario de Carga de Cliente</h1>
 	<form id="formProducto" th:object="${unCliente}" th:action="@{/cliente/guardar}" method="post">
 		
 		<label for="nombreA">Nombre y Apellido</label> 
@@ -37,7 +37,7 @@
 			<option value="11">11</option>
 			<option value="370">370</option>
 			</select>
-					
+				
 		<br>
 		
 			<label for="numtel">Telefono</label> 
@@ -74,12 +74,12 @@
 						<td th:text="${cli.nroDocumento}"></td>
 						<td th:text="${cli.nombreApellido}"></td>
 						<td th:text="${cli.fechaNacimiento}"></td>
-						<td th:text="${cli.edad}"></td>
+						<td th:text="${cli.getEdad}"></td>
 						<td th:text="${cli.fechaUltimaCompra}"></td>
 						<td th:text="${cli.tipoDocumento}"></td>
 						<td th:text="${cli.numTelefonoCompleto}"></td>
 						<td th:text="${cli.email}"></td>		
-						<td th:text="${cli.datosAdicionales}"></td>		
+						<td th:text="${cli.getDatosAdicionales}"></td>		
 					
 					</tr>
 				</table>
