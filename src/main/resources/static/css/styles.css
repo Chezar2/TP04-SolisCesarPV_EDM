@@ -1,4 +1,61 @@
 body{
-	background-image: url(../img/24269.jpg);
+	background-image: url(../img/1691795.jpg);
+	background-attachment: fixed;
+}
+.titulo{
 	color: white;
+	background-color: #333;
+	display: block;
+	text-align: center;
+    padding: 20px;
+    margin-top: 10px;
+    opacity: 90%;
+    border-radius: .2rem;
+}
+.sub-titulo{
+	color: white;
+	background-color: #333;
+	display: block;
+	text-align: center;
+    padding: 15px;
+    margin-top: 30px;
+    opacity: 90%;
+    border-radius: .2rem;
+}
+span,input, select{
+   font-size: 20px;
+   opacity: 90%;
+   	color: white;
+}
+
+label{
+	color: #fff;
+	 font-size: 20px;
+	
+}
+.formulario{
+	margin-left: 5cm;
+	margin-right: 5cm;
+	margin-top: 2cm;
+}
+.agregar{
+	background-color: #27AE60;
+	transition: .1s;
+	font-size: 19px;
+}
+.agregar:hover{
+	background-color: #229954;
+	font-size: 20px;
+	transition: .2s;
+}
+.cabeza{
+	background-color: whitesmoke; 
+	  padding: .4cm;
+}
+.pie{
+	background-color:#333;
+    padding: .5cm;
+}
+.table{
+	background-color: whitesmoke;
 }
