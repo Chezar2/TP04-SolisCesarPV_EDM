@@ -73,9 +73,54 @@ label{
 	background-color:#333;
     padding: .5cm;
     color: white;
+    margin-top: 30px;
 }
 
 .table{
 	background-color: whitesmoke;
 
+}
+.navegador-chico{
+	display: block;
+	text-align: center;
+	background-color: white;
+	opacity: 70%;
+}
+.navegador-chico ul li a,.navegador-chico ul li span{
+	text-decoration: none;
+	font-size: 20px;
+	color: black;
+	padding: 1px;
+	margin: 1cm;
+}
+.volver{
+	color: white;
+	background-color: gray;
+	text-decoration: none;
+	font-size: 20px;
+	display: block;
+	text-align: center;
+	margin-left: 5cm;
+	margin-right: 5cm;
+	transition: 2s;
+	border-radius: 1rem;
+}
+.volver:hover{
+	color: gray;
+	background-color: whitesmoke;
+		transition: 1s;
+	
+}
+.pre-volver{
+	list-style: none;
+}
+.navegador-chico ul li a:hover{
+		color: white;
+	background-color: #333;
+		opacity: 80%;
+	transition: .6s;
+	border-radius: .3rem;
+}
+.navegador-chico ul{
+	list-style: none;
 }
