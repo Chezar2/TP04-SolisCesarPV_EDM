@@ -22,10 +22,13 @@ body{
     opacity: 90%;
     border-radius: .2rem;
 }
-span,input, select{
+.mb-3 span,input, select{
    font-size: 20px;
    opacity: 90%;
-   	color: white;
+   	color: whitesmoke;
+}
+span{
+	margin-left: 3px;
 }
 
 label{
@@ -49,27 +52,28 @@ label{
 	transition: .2s;
 }
 .cabeza{
-	background-color: whitesmoke; 
+	background-color: #16A085 ; 
 	  padding: .4cm;
 }
 .cabeza a{
 	color: #333;
 	transition: .4s;
+	font-size: 17px;
 
 }
 .cabeza a:hover{
 	color: white;
 	background-color: #333;
-	font-size: 15px;
-		opacity: 50%;
+	font-size: 16px;
+		opacity: 80%;
 	transition: .6s;
 	
 }
 
-
 .pie{
 	background-color:#333;
     padding: .5cm;
+    color: white;
 }
 .table{
 	background-color: whitesmoke;
