@@ -4,7 +4,7 @@ body{
 }
 .titulo{
 	color: white;
-	background-color: #333;
+	background-color: #16A085 ;
 	display: block;
 	text-align: center;
     padding: 20px;
@@ -14,7 +14,7 @@ body{
 }
 .sub-titulo{
 	color: white;
-	background-color: #333;
+	background-color: #16A085 ;
 	display: block;
 	text-align: center;
     padding: 15px;
@@ -37,22 +37,24 @@ label{
 	
 }
 .formulario{
-	margin-left: 5cm;
-	margin-right: 5cm;
+	margin-left: 3cm;
+	margin-right: 3cm;
 	margin-top: 2cm;
 }
 .agregar{
 	background-color: #27AE60;
 	transition: .1s;
-	font-size: 19px;
+	font-size: 20px;
+	opacity: 80%;
 }
 .agregar:hover{
-	background-color: #229954;
-	font-size: 20px;
+	background-color: rgb(66, 213, 129);
+	font-size: 22px;
 	transition: .2s;
+	opacity: 90%;
 }
 .cabeza{
-	background-color: #16A085 ; 
+	background-color: #fff ; 
 	  padding: .4cm;
 }
 .cabeza a{
@@ -64,17 +66,16 @@ label{
 .cabeza a:hover{
 	color: white;
 	background-color: #333;
-	font-size: 16px;
 		opacity: 80%;
-	transition: .6s;
-	
+	transition: .6s;	
 }
-
 .pie{
 	background-color:#333;
     padding: .5cm;
     color: white;
 }
+
 .table{
 	background-color: whitesmoke;
+
 }
