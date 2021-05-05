@@ -93,8 +93,10 @@
 				      <th>Tipo Documento:</th>
 				      <th>Telefono Completo:</th>
 				      <th>E-mail:</th>	
-				       <th>Datos Adicionales </th>	       
-				       			      
+				      <th>Datos Adicionales </th>	       				        
+				    </tr>
+				    <tr th:if="${clientes.empty}">
+				        <td colspan="2">No hay clientes cargados</td>
 				    </tr>
 					<tr th:each="cli : ${clientes}">
 						<td th:text="${cli.nroDocumento}"></td>
