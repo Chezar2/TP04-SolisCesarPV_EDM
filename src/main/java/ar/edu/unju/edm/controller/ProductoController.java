@@ -19,23 +19,24 @@ public class ProductoController {
 	@Autowired
 	ProductoService iProductoService;
 	
-@GetMapping("/producto")
+@GetMapping("/producto/mostrar")
 public String cargarProducto(Model model) {
 	model.addAttribute("unProducto", iProductoService.obtenerProductoNuevo());
+	model.addAttribute("productos",iProductoService.obtenerTodoProducto());
 	return("producto");
 }
 	
-	@PostMapping("/producto")
+	@PostMapping("/producto/guardar")
 	public String guardarNuevoProducto(@ModelAttribute("unProducto") Producto nuevoProducto, Model model) {
 		iProductoService.guardarProducto(nuevoProducto);
-		System.out.println(iProductoService.obtenerTodoProducto().get(0).getMarca());
-		model.addAttribute("productos",iProductoService.obtenerTodoProducto());
+		
 		CESAR.error("Solo de prueba");
 		CESAR.info("solo de prueba/info");
 		CESAR.warn("Peligro, es una prueba");
-		return("resultado");
+		
+		return("redirect:/producto/mostrar");
 	}
-	
+/*
 	@GetMapping("/ultimo")
 	public String cargarUltimoProducto(Model model) {
 		model.addAttribute("ultimoProducto", iProductoService.obtenerUltimoProducto());
@@ -45,7 +46,7 @@ public String cargarProducto(Model model) {
 	public String cargarNuevoProducto(Model model) {
 		return("redirect:/producto");
 	}
-	
+	*/
 	
 }
 

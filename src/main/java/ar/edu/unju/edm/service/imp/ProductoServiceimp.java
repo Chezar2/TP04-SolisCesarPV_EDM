@@ -1,24 +1,21 @@
 package ar.edu.unju.edm.service.imp;
-
-import java.util.ArrayList;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import ar.edu.unju.edm.model.Producto;
 import ar.edu.unju.edm.service.ProductoService;
+import ar.edu.unju.edm.util.ListadoProductos;
 @Service
 public class ProductoServiceimp implements ProductoService {
-	
-
 	//como se hace
 	//guardar en array
 	//guarde en BD
 	
 	@Autowired
 	Producto unProducto;
-
-	ArrayList<Producto> listaDeProductos = new ArrayList<Producto>();
+	private List<Producto> listaDeProductos = ListadoProductos.productos;
+	//ArrayList<Producto> listaDeProductos = new ArrayList<Producto>();
 	
 	@Override
 	public void guardarProducto(Producto unProducto) {
@@ -46,7 +43,7 @@ public class ProductoServiceimp implements ProductoService {
 	}
 
 	@Override
-	public ArrayList<Producto> obtenerTodoProducto() {
+	public List<Producto> obtenerTodoProducto() {
 		// TODO Auto-generated method stub
 		return listaDeProductos;
 	}

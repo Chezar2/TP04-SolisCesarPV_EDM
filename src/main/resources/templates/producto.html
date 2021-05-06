@@ -13,7 +13,7 @@
 <div class="container">
 	<h1 class="titulo">Formulario de Carga de Producto</h1>
 	<div class="form-group formulario">
-	<form id="formProducto" th:object="${unProducto}" th:action="${producto}" method="post">
+	<form id="formProducto" th:object="${unProducto}" th:action="@{/producto/guardar}" method="post">
 		
 		<div class="mb-3">
 			<label for="codigo">Codigo</label> 
@@ -42,7 +42,31 @@
 
 	</form>
 	</div>
-	
+	<h3 class="sub-titulo">Lista de Productos</h3><br>
+			<div class="container">
+				<table  border=1 style="border-collapse:collapse" class="table">
+				
+				    <tr>
+				      <th>Cod Producto</th>
+				      <th>Nombre</th>
+				      <th>Precio</th>
+				      <th>Marca</th>
+				      <th>Stock</th>				      
+				    </tr>
+				       <tr th:if="${productos.empty}">
+				        <td colspan="2">No hay clientes cargados</td>
+				       </tr>
+					<tr th:each="producto : ${productos}">
+						<td th:text="${producto.codigo}"></td>
+						<td th:text="${producto.nombre}"></td>
+						<td th:text="${producto.precio}"></td>
+						<td th:text="${producto.marca}"></td>
+						<td th:text="${producto.stock}"></td>
+					</tr>
+			
+				</table>
+			</div>
+</div>
 </div>
 	
 	<div th:insert="layout/footer :: footer" class="pie"></div>	
