@@ -11,7 +11,7 @@
 <div th:insert="layout/header :: header" class="cabeza"></div>
 
 <div class="container">
-	<h1 class="titulo">Formulario de Carga de Producto</h1>	
+	<h2 class="titulo">Formulario de Carga de Producto</h2>	
 	<div class="form-group formulario">
 
 	<form id="formProducto" th:object="${unProducto}" th:action="@{/producto/guardar}" method="post">
@@ -55,7 +55,7 @@
 				      <th>Stock</th>				      
 				    </tr>
 				       <tr th:if="${productos.empty}">
-				        <td colspan="2">No hay clientes cargados</td>
+				        <td colspan="2">No hay Productos cargados</td>
 				       </tr>
 					<tr th:each="producto : ${productos}">
 						<td th:text="${producto.codigo}"></td>

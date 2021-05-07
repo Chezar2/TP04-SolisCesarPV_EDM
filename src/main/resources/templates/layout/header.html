@@ -6,12 +6,21 @@
   <li class="nav-item">
  <a class="nav-link" href="/">Home<span><i class="fas fa-home"></i></span></a>
   </li>
-  <li class="nav-item">
+  <li class="nav navbar-item">
     <a class="nav-link" href="../cliente/mostrar">Cliente<span><i class="fas fa-user-circle"></i></span></a>
   </li>
-  <li class="nav-item">
-    <a class="nav-link" href="../producto/mostrar">Producto<span><i class="fas fa-store"></i></span></a>
-  </li>
+   <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Producto<span><i class="fas fa-store"></i></span></a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="/producto/ventas">Ventas</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="/producto/mostrar">Agregar Producto</a></li>
+
+          </ul>
+        </li>
+  
+  
 </ul>
 </div>
 </body>

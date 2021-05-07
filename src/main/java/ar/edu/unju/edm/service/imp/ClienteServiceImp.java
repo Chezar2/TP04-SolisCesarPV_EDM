@@ -1,8 +1,6 @@
 package ar.edu.unju.edm.service.imp;
 
 
-import java.time.Period;
-import java.time.temporal.ChronoUnit;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -37,6 +35,31 @@ public class ClienteServiceImp implements IClienteService{
 	public List<Cliente> obtenerTodosClientes() {
 		// TODO Auto-generated method stub
 		return listadoClientes;
+	}
+
+	@Override
+	public Cliente encontrarUnCliente(int dni) {
+		// TODO Auto-generated method stub
+		for (int i=0; i < listadoClientes.size();i++)
+		{
+			if(listadoClientes.get(i).getNroDocumento() == dni)
+			{
+				unCliente = listadoClientes.get(i);
+	    	}
+		}
+		return unCliente;
+	}
+	
+	
+	public void modificarCliente(Cliente clienteModificado) {
+		for (int i=0; i< listadoClientes.size();i++)
+		{
+			if(listadoClientes.get(i).getNroDocumento() == clienteModificado.getNroDocumento())
+			{
+				listadoClientes.set(i, clienteModificado);
+			}
+	
+		}	
 	}
 
 }

@@ -47,6 +47,6 @@ public String cargarProducto(Model model) {
 		return("redirect:/producto");
 	}
 	*/
-	
+
 }
 
