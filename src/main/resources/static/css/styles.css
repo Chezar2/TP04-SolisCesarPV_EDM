@@ -1,7 +1,10 @@
-body{
-background-image: url(../img/fondo_ciudad.jpg);
+.cliente, .producto{
+background-color: #FFFFFF;
 background-attachment: fixed;
 background-repeat: no-repeat;
+}
+.index{
+		 background-color: #2A2B40;
 }
 .todo-index{
 	display: blocK;
@@ -15,6 +18,7 @@ background-repeat: no-repeat;
 }
 .formulario-home{
   display: block; 
+  background-color: white;
   border-radius: 1.2rem;
   opacity: 90%;
 }
@@ -23,29 +27,27 @@ background-repeat: no-repeat;
 }
 
 .titulo{
-	color: white;
-	background-color: #16A085 ;
+	color: #34485E;
+	background-color: #41B783 ;
 	display: block;
 	text-align: center;
     padding: 20px;
     margin-top: 10px;
-    opacity: 99%;
     border-radius: .5rem;
 }
 .sub-titulo{
-	color: white;
-	background-color: #16A085 ;
+	color: #34485E;
+	background-color: #41B783 ;
 	display: block;
 	text-align: center;
     padding: 15px;
     margin-top: 30px;
-    opacity: 99%;
     border-radius: .2rem;
 }
 .mb-3 span,input, select{
    font-size: 20px;
    opacity: 90%;
-   	color: whitesmoke;
+   	color: #34485E;
 }
 
 .form-control:focus{
@@ -60,7 +62,7 @@ span{
 	margin-left: 3px;
 }
 label{
-	color: #fff;
+	color: #34485E;
 	 font-size: 20px;
 }
 .formulario{
@@ -71,32 +73,36 @@ label{
 .agregar{
 	background-color: #27AE60;
 	transition: .1s;
+	color: #34485E;
 	font-size: 20px;
-	opacity: 80%;
 }
 .agregar:hover{
-	background-color: rgb(66, 213, 129);
-	font-size: 22px;
+	background-color:#109D58;
 	transition: .2s;
-	opacity: 90%;
+	opacity: 80%;
 }
 .cabeza{
-	background-color: #fff ; 
+	background-color: #0A0A22 ; 
 	  padding: .4cm;
 }
 .cabeza a{
-	color: #333;
-	transition: .4s;
+	color: #FFF;
+	transition: .1s;
 	font-size: 17px;
 }
 .cabeza a:hover{
-	color: white;
-	background-color: #333;
+		color: #FFF;
+	background-color: #414255;
 		opacity: 80%;
-	transition: .6s;	
+	transition: .3s;	
 }
+.dropdown ul {
+ 	background-color: #0A0A22;
+ 	transition: .4s;
+}
+
 .pie{
-	background-color:#333;
+	background-color:#0A0A22;
     padding: .5cm;
     color: white;
     margin-top: 30px;
