@@ -1,9 +1,4 @@
-.cliente, .producto{
-background-color: #FFFFFF;
-background-attachment: fixed;
-background-repeat: no-repeat;
-}
-.index{
+body{
 		 background-color: #2A2B40;
 }
 .todo-index{
@@ -18,7 +13,7 @@ background-repeat: no-repeat;
 }
 .formulario-home{
   display: block; 
-  background-color: white;
+  color: white;
   border-radius: 1.2rem;
   opacity: 90%;
 }
@@ -27,7 +22,7 @@ background-repeat: no-repeat;
 }
 
 .titulo{
-	color: #34485E;
+	color: white;
 	background-color: #41B783 ;
 	display: block;
 	text-align: center;
@@ -36,7 +31,7 @@ background-repeat: no-repeat;
     border-radius: .5rem;
 }
 .sub-titulo{
-	color: #34485E;
+	color: white;
 	background-color: #41B783 ;
 	display: block;
 	text-align: center;
@@ -47,13 +42,15 @@ background-repeat: no-repeat;
 .mb-3 span,input, select{
    font-size: 20px;
    opacity: 90%;
-   	color: #34485E;
+   color:white;
 }
-
+.form-control{
+	 	background-color: #2A2B40;
+}
 .form-control:focus{
 	transition: .2s;
-   background-color: #CACFD2;
-   color: black;
+   color: white;
+   	background-color: #2A2B40;
    border-color: whitesmoke;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgb(0, 0, 0.092);
 
@@ -62,7 +59,7 @@ span{
 	margin-left: 3px;
 }
 label{
-	color: #34485E;
+	color: #FFFFFF;
 	 font-size: 20px;
 }
 .formulario{
