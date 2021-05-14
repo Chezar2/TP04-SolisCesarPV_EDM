@@ -18,7 +18,7 @@ public class ClienteController {
 	private static final Log LOGGER = LogFactory.getLog(ClienteController.class);
 	
 	@Autowired
-	@Qualifier("otroImp")
+	@Qualifier("impmysql")
 	IClienteService clienteService;
 	
 	/*@Autowired

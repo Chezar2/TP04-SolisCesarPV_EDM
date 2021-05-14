@@ -22,6 +22,8 @@ public class Cliente {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column
+	private Integer idCliente;
+	@Column
 	private int nroDocumento;
 	@Column
 	private String tipoDocumento;
@@ -39,7 +41,7 @@ public class Cliente {
 	private LocalDate fechaUltimaCompra;	
 	@Column
 	private int codigoAreaTelefono;
-	@Column
+    @Column
 	private int numTelefono;
 	@Column
 	private String  numTelefonoCompleto;
@@ -51,6 +53,12 @@ public class Cliente {
 	
 	public Cliente() {
 		// TODO Auto-generated constructor stub
+	}
+public Integer getIdCliente() {
+		return idCliente;
+	}
+	public void setIdCliente(Integer idCliente) {
+		this.idCliente = idCliente;
 	}
 public int getEdad() {
 	int edad=0;
@@ -203,8 +211,7 @@ public void setFechaUltimaCompra(LocalDate fechaUltimaCompra) {
 	}
 
 
-
-
+	
 	public int getNumTelefono() {
 		return numTelefono;
 	}
@@ -229,5 +236,6 @@ public void setFechaUltimaCompra(LocalDate fechaUltimaCompra) {
 	public void setNumTelefonoCompleto(String numTelefonoCompleto) {
 		this.numTelefonoCompleto = numTelefonoCompleto;
 	}
+	
 }
 

@@ -10,7 +10,7 @@ import ar.edu.unju.edm.model.Cliente;
 import ar.edu.unju.edm.repository.IclienteDAO;
 import ar.edu.unju.edm.service.IClienteService;
 @Service
-@Qualifier("otroImp")
+@Qualifier("impmysql")
 public class ClienteServiceMySQL implements IClienteService{
 	@Autowired
 	Cliente unCliente;
@@ -20,6 +20,7 @@ public class ClienteServiceMySQL implements IClienteService{
 	@Override
 	public void guardarCliente(Cliente unCliente) {
 		// TODO Auto-generated method stub
+		clienteDAO.save(unCliente);
 		
 	}
 
