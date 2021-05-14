@@ -9,7 +9,6 @@
 <link th:href="@{/css/styles.css}" rel="stylesheet" type="text/css" href="/static/css/styles.css">
 </head>
 <body class="index">
-<div th:insert="layout/header :: header" class="cabeza"></div>
 
 <div class="container todo-index">
         <div class="formulario-home row form-group col-lg-4 col-md-6 col-sm-10 col-xs-12">
@@ -25,6 +24,19 @@
         </div>
      <button type="submit" class="btn agregar">Ingresar</button>
 </form>
+<div class="nav">
+<li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Links<span><i class="fas fa-store"></i></span></a>
+ <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="/cliente/mostrar">Cliente</a></li>
+           <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item " href="/producto/ventas">Ventas</a></li>
+            <li><a class="dropdown-item " href="/producto/mostrar">Agregar Producto</a></li>
+
+          </ul>
+          </li>
+  </div>
 </div>
 </div>
 	
