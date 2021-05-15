@@ -1,26 +1,34 @@
-body{
+
+.cliente,.producto, .ventas{
 		 background-color: #2A2B40;
+}
+.index{
+background-image: url(/img/llama.jpg);
+	background-repeat: no-repeat;
+	background-attachment: fixed;	
 }
 .todo-index{
 	display: blocK;
 	text-align: center;
 	margin-bottom: 4cm;
-	margin-top: 1cm;
-}
-.form-group{
-		   opacity: 90%;
-		   padding: 10px;	  
+	margin-top: 2cm;
 }
 .formulario-home{
   display: block; 
   color: white;
   border-radius: 1.2rem;
-  opacity: 90%;
 }
-.formulario-home form button, .formulario-home form div input{
-	margin: .2cm;
+.formulario-home form button,.formulario-home form div input{
+	margin: 15px auto;
 }
+.titulo-inicio{
 
+	color: white;
+	display: block;
+	text-align: center;
+    padding: 10px;
+    margin-top: 10px;
+}
 .titulo{
 	color: white;
 	background-color: #41B783 ;
@@ -38,21 +46,31 @@ body{
     padding: 15px;
     margin-top: 30px;
     border-radius: .2rem;
+    transition: 0.25s;
 }
 .mb-3 span,input, select{
+
    font-size: 20px;
-   opacity: 90%;
    color:white;
 }
 .form-control{
-	 	background-color: #2A2B40;
-	 	color: white;
+   display: block;
+   margin: 15px auto;
+	background-color: #2A2B40;
+	color: white;
+	width: 200px;
+	padding: 14px 10px;
+	text-align: center;
+	outline: none;
+	border: 2px solid white;
+	border-radius: 24px;
 }
 .form-control:focus{
 	transition: .2s;
+	width: 280px;
    color: white;
    	background-color: #2A2B40;
-   border-color: whitesmoke;
+   border-color: #2ecc71;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgb(0, 0, 0.092);
 
 }
@@ -64,20 +82,30 @@ label{
 	 font-size: 20px;
 }
 .formulario{
-	margin-left: 3cm;
-	margin-right: 3cm;
-	margin-top: 1cm;
+	display: block;
+	 padding: 10px;	
+	margin: 1cm auto;
+	text-align: center;
 }
 .agregar{
-	background-color: #27AE60;
-	transition: .1s;
-	color: #34485E;
-	font-size: 20px;
+	border:0;
+    background:none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #2ecc71;
+    padding: 14px 40px;
+    outline: none;
+	color: white;
+	border-radius: 24px;
+
+    transition: 0.25s;
+	
+	cursor: pointer;
 }
 .agregar:hover{
-	background-color:#109D58;
+	background-color:#2ecc71;
 	transition: .2s;
-	opacity: 80%;
 }
 .cabeza{
 	background-color: #0A0A22 ; 
@@ -101,9 +129,11 @@ label{
 
 .pie{
 	background-color:#0A0A22;
-    padding: .5cm;
+  	padding: .6cm;
+    height: 3cm;
     color: white;
-    margin-top: 30px;
+    margin-top: 1cm;
+      bottom: 0;
 }
 
 .table{
