@@ -1,13 +1,29 @@
 package ar.edu.unju.edm.model;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
 import org.springframework.stereotype.Component;
 
+@Entity
+@Table (name="PRODUCTOS")
 @Component
 public class Producto {
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column
 	private int codigo;
+	@Column
 	private String nombre;
+	@Column
 	private double precio;
+	@Column
 	private String marca;
+	@Column
 	private int stock;
 	
 	public Producto() {

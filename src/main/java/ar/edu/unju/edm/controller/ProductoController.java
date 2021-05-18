@@ -3,6 +3,7 @@ package ar.edu.unju.edm.controller;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -10,7 +11,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
-import ar.edu.unju.edm.model.Cliente;
+
 import ar.edu.unju.edm.model.Producto;
 import ar.edu.unju.edm.service.ProductoService;
 
@@ -19,12 +20,15 @@ public class ProductoController {
 	private static final Log LOGGER = LogFactory.getLog(ProductoController.class);
 	
 	@Autowired
+	@Qualifier("impmysqlproducto")
 	ProductoService iProductoService;
 	
 @GetMapping("/producto/mostrar")
 public String cargarProducto(Model model) {
-	model.addAttribute("unProducto", iProductoService.obtenerProductoNuevo());
-	model.addAttribute("productos",iProductoService.obtenerTodoProducto());
+//model.addAttribute("unProducto", iProductoService.obtenerProductoNuevo());
+//model.addAttribute("productos",iProductoService.obtenerTodoProducto());
+	model.addAttribute("unProducto",iProductoService.crearProducto());
+	model.addAttribute("productos", iProductoService.obtenerTodoProducto());
 	return("producto");
 }
 @GetMapping("/producto/editar/{codigo}")
