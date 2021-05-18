@@ -26,6 +26,7 @@ public class Producto {
 	@Column
 	private int stock;
 	
+	//descripcion 
 	public Producto() {
 		super();
 		// TODO Auto-generated constructor stub

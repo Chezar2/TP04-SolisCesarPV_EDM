@@ -79,4 +79,18 @@ public class ClienteController {
 		model.addAttribute("clientes", clienteService.obtenerTodosClientes());
 		return ("cliente");
 	}
+	
+	//modal peticiones
+	@GetMapping("/cliente/eliminarCliente/{id}")
+	public String eliminarCliente(Model model, @PathVariable(name="nroDocumento") int dni) {		
+		try {			clienteService.eliminarCliente(dni);			
+		}
+		catch(Exception e){
+			model.addAttribute("listErrorMessage",e.getMessage());
+		}			
+		return "redirect:/cliente/mostrar";
+	}
+	
+	
+	
 }
