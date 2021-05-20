@@ -13,8 +13,8 @@ import ar.edu.unju.edm.model.Cliente;
 @Repository
 public interface IclienteDAO extends CrudRepository<Cliente, Integer>{
 
-		@Query("from Cliente c order by c.nroDocumento")
+		@Query("from Cliente c order by c.idCliente")
 		public List<Cliente> obtenerClientes();
 			
-		
+			
 	}

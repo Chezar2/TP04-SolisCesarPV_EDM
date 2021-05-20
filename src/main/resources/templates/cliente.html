@@ -21,12 +21,13 @@
 			<form id="formProducto" th:object="${unCliente}"
 				th:action="${editMode}?@{/cliente/modificar}:@{/cliente/guardar}" method="post">
 				<div class="mb-3">
-					<label for="nombreA" class="form-check-label">Nombre y Apellido: </label>
+					<label for="nombreA" class="form-check-label">Nombre y Apellido*: </label>
 					<input type="text" id="nombreApellido" th:field="*{nombreApellido}" class="form-control">
+					<div class="alert alert-danger" th:if="${#fields.hasErrors('nombreApellido')}" th:errors="*{nombreApellido}">Name	Error</div>
 				</div>
 
 				<div class="mb-3">
-					<label for="tipo" class="form-check-inline">Tipo de Documento: </label>
+					<label for="tipo" class="form-check-inline">Tipo de Documento*: </label>
 					<input type="radio" name="tipo" value="DNI" id="tipo" th:field="*{tipoDocumento}"
 						class="form-check-input"><span>DNI</span>
 					<input type="radio" name="tipo" value="Pasaporte" id="tipo" th:field="*{tipoDocumento}"
@@ -35,8 +36,9 @@
 				</div>
 
 				<div class="mb-3">
-					<label for="numdoc" class="form-check-label">Nro de Documento</label>
+					<label for="numdoc" class="form-check-label">Nro de Documento*:</label>
 					<input type="number" id="numdoc" th:field="*{nroDocumento}" class="form-control">
+					<div class="alert alert-danger" th:if="${#fields.hasErrors('nroDocumento')}" th:errors="*{nroDocumento}">Name	Error</div>
 				</div>
 
 				<div class="mb-3">
@@ -50,12 +52,12 @@
 				</div>
 
 				<div class="mb-3">
-					<label for="email" class="form-check-label">E-mail: </label>
+					<label for="email" class="form-check-label">E-mail*: </label>
 					<input type="email" id="email" th:field="*{email}" class="form-control">
 				</div>
 
 				<div class="mb-3">
-					<label for="password" class="form-check-label">Contraseña: </label>
+					<label for="password" class="form-check-label">Contraseña*: </label>
 					<input type="password" id="tipo" th:field="*{password}" class="form-control">
 				</div>
 

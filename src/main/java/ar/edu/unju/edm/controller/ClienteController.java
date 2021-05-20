@@ -1,11 +1,14 @@
 package ar.edu.unju.edm.controller;
 
+import javax.validation.Valid;
+
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -35,11 +38,11 @@ public class ClienteController {
 	}
 	
 	
-	@GetMapping("/cliente/editar/{nroDocumento}")
-	public String editarCliente(Model model, @PathVariable(name="nroDocumento") int dni) throws Exception{
+	@GetMapping("/cliente/editar/{idCliente}")
+	public String editarCliente(Model model, @PathVariable(name="idCliente") int id) throws Exception{
 		try {
 			//permite realizar una accion, y si ocurre error no se cae el program
-			Cliente clienteEncontrado = clienteService.encontrarUnCliente(dni);
+			Cliente clienteEncontrado = clienteService.encontrarUnCliente(id);
 			model.addAttribute("unCliente", clienteEncontrado);
 			model.addAttribute("editMode", "true");
 		}
@@ -54,11 +57,21 @@ public class ClienteController {
 	}
 
 	@PostMapping("/cliente/guardar")
-	public String guardarNuevoProducto(@ModelAttribute("unCliente") Cliente nuevoCliente, Model model) {
-		LOGGER.info("METHOD: ingresando el metodo Guardar");
-		clienteService.guardarCliente(nuevoCliente);		
+	public String guardarNuevoProducto(@Valid @ModelAttribute("unCliente") Cliente nuevoCliente,BindingResult resultado, Model model) {
+		
+	if (resultado.hasErrors())
+	{
+		model.addAttribute("unCliente",nuevoCliente);
+		model.addAttribute("clientes", clienteService.obtenerTodosClientes());
+	return ("cliente");
+	}
+	else {LOGGER.info("METHOD: ingresando a Guardar");
+	//deberia haber try
+	clienteService.guardarCliente(nuevoCliente);		
 		LOGGER.info("Tamaño del Listado: "+ clienteService.obtenerTodosClientes().size());
 		return "redirect:/cliente/mostrar";
+	}
+	
 	}
 	
 	@PostMapping("/cliente/modificar")
@@ -82,8 +95,8 @@ public class ClienteController {
 	
 	//modal peticiones
 	@GetMapping("/cliente/eliminarCliente/{id}")
-	public String eliminarCliente(Model model, @PathVariable(name="nroDocumento") int dni) {		
-		try {			clienteService.eliminarCliente(dni);			
+	public String eliminarCliente(Model model, @PathVariable(name="idCliente") int id) {		
+		try {			clienteService.eliminarCliente(id);			
 		}
 		catch(Exception e){
 			model.addAttribute("listErrorMessage",e.getMessage());

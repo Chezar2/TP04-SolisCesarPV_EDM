@@ -12,7 +12,7 @@ public interface IClienteService {
 	public List<Cliente> obtenerTodosClientes();
 	
 	
-	public Cliente encontrarUnCliente(int dni) throws Exception;
+	public Cliente encontrarUnCliente(int id) throws Exception;
 	public void modificarCliente(Cliente clienteModificado) throws Exception;
-	public void eliminarCliente(int dni);
+	public void eliminarCliente(int id) throws Exception;
 }

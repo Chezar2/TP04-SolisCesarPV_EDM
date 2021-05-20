@@ -37,10 +37,10 @@ public class ClienteServiceMySQL implements IClienteService{
 	}
 
 	@Override
-	public Cliente encontrarUnCliente(int dni) throws Exception {
+	public Cliente encontrarUnCliente(int id) throws Exception {
 		// TODO Auto-generated method stub
 		
-		return clienteDAO.findById(dni).orElseThrow(()->new Exception("El cliente No existe"));
+		return clienteDAO.findById(id).orElseThrow(()->new Exception("El cliente No existe"));
 	}
 
 	@Override
@@ -65,7 +65,8 @@ public class ClienteServiceMySQL implements IClienteService{
 	}
 	private void cambiarCliente(Cliente desde, Cliente hacia) {
 		//observen que vamos a pasar todos los atributos del cliente que viene, hacia el cliente que ya está en la BD
-		//hacia.setNroDocumento(desde.getNroDocumento());
+		hacia.setNroDocumento(desde.getNroDocumento());
+		hacia.setNombreApellido(desde.getNombreApellido());
 		hacia.setTipoDocumento(desde.getTipoDocumento());
 		hacia.setFechaNacimiento(desde.getFechaNacimiento());
 		hacia.setCodigoAreaTelefono(desde.getCodigoAreaTelefono());
@@ -74,10 +75,9 @@ public class ClienteServiceMySQL implements IClienteService{
 		//observen que NO se ha cambiado el id, ya que ese atributo no debería permitirse cambiar
 	}
 
-	@Override
-	public void eliminarCliente(int dni) {
+	public void eliminarCliente(int id) throws Exception {
 		// TODO Auto-generated method stub
-		clienteDAO.deleteById(dni);
+		Cliente clienteEliminar = clienteDAO.findById(id).orElseThrow(()->new Exception("El Cliente no fue encontrado"));
+		clienteDAO.delete(clienteEliminar);
 	}
-
 }
