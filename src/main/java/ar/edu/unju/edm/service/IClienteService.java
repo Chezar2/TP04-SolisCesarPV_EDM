@@ -13,7 +13,6 @@ public interface IClienteService {
 	
 	
 	public Cliente encontrarUnCliente(int dni) throws Exception;
-	public void modificarCliente(Cliente clienteModificado);
+	public void modificarCliente(Cliente clienteModificado) throws Exception;
 	public void eliminarCliente(int dni);
-   
 }

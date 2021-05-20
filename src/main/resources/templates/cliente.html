@@ -35,7 +35,7 @@
 				</div>
 
 				<div class="mb-3">
-					<label for="numdoc" class="form-check-label">Nro de Documento: </label>
+					<label for="numdoc" class="form-check-label">Nro de Documento</label>
 					<input type="number" id="numdoc" th:field="*{nroDocumento}" class="form-control">
 				</div>
 
@@ -91,6 +91,7 @@
 			<div style="overflow:scroll">
 				<table class="table">
 					<tr>
+					  <th>ID cliente:</th>
 						<th>Nro Documento:</th>
 						<th>Nombre y Apellido:</th>
 						<th>FechaNac:</th>
@@ -105,6 +106,7 @@
 						<td colspan="2">No hay clientes cargados</td>
 					</tr>
 					<tr th:each="cli : ${clientes}">
+					<td th:text="${cli.getIdCliente}"></td>
 						<td th:text="${cli.nroDocumento}"></td>
 						<td th:text="${cli.nombreApellido}"></td>
 						<td th:text="${cli.fechaNacimiento}"></td>
@@ -115,8 +117,8 @@
 						<td th:text="${cli.email}"></td>
 						<td th:text="${cli.getDatosAdicionales}"></td>
 						<td>
-							<a href="#" th:href="@{'/cliente/editar/'+${cli.nroDocumento}}"> <i
-									class="fa fa-edit"></i></a>
+							<a href="#" th:href="@{'/cliente/editar/'+${cli.getIdCliente}}"> <i
+									class="fa fa-edit fa-2x"></i></a>
 						
                             <a th:onclick="'javascript:confirmarEliminar(\''+${cli.nroDocumento}+'\');'"><i class="fa fa-trash-alt"></i></a>
 						</td>
