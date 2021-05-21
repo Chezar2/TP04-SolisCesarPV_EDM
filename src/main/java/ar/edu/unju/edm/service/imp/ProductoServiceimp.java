@@ -88,4 +88,12 @@ public class ProductoServiceimp implements ProductoService {
 		return unProducto;
 	}
 
+
+
+	@Override
+	public Producto obtenerProductoCodigo(Integer codigo) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }

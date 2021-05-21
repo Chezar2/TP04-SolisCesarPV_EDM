@@ -9,6 +9,7 @@ import ar.edu.unju.edm.model.Producto;
 public interface ProductoService {
 //que se hace
 	public void guardarProducto(Producto unProducto);
+	public Producto obtenerProductoCodigo(Integer codigo);
 	public Producto crearProducto();
 	public void modificarProducto(Producto productoModificado);
 	public void eliminarProducto(Producto productoAEliminar);

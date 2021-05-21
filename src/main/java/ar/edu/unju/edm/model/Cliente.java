@@ -30,14 +30,15 @@ public class Cliente {
 	@Column
 	private Integer idCliente;
 	@Column
-	@Min(100000)
-	@Max(99999999)
-	private int nroDocumento;
-	@Column
-	private String tipoDocumento;
-	@Column
 	@NotBlank(message="Debe incluir su Nombre y Apellido")
 	private String nombreApellido;
+	@Column
+	@Min(value=10, message="Debe ser Mayor a 10" )
+	@Max(value=99999999, message="Debe ser Menor a 99.999.999")
+	private int nroDocumento;
+	//antes el valor de nroDocumento era como mínimo value=100000 
+	@Column
+	private String tipoDocumento;
 	@Column
 	private String email;
 	@Column

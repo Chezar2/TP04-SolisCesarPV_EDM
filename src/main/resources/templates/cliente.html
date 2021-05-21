@@ -20,6 +20,7 @@
 		<div class="form-group formulario col-lg-6 col-md-6 col-sm-8 col-xs-12">
 			<form id="formProducto" th:object="${unCliente}"
 				th:action="${editMode}?@{/cliente/modificar}:@{/cliente/guardar}" method="post">
+		<input type="hidden" th:field="*{idCliente}"th:if="${editMode}">
 				<div class="mb-3">
 					<label for="nombreA" class="form-check-label">Nombre y Apellido*: </label>
 					<input type="text" id="nombreApellido" th:field="*{nombreApellido}" class="form-control">
@@ -80,7 +81,7 @@
 
 				<div>
 					<!--		<button type="submit" value="Agregar" class="btn agregar">Agregar <span><i class="far fa-paper-plane"></i></span></button>-->
-					<input type="submit" class=" agregar" th:value="${editMode}?'Modificar Cliente':'Crear Cliente'">
+					<input type="submit" class="agregar" th:value="${editMode}?'Modificar Cliente':'Crear Cliente'">
 				</div>
 
 			</form>
@@ -120,7 +121,7 @@
 						<td th:text="${cli.getDatosAdicionales}"></td>
 						<td>
 							<a href="#" th:href="@{'/cliente/editar/'+${cli.getIdCliente}}"> <i
-									class="fa fa-edit fa-2x"></i></a>
+									class="fa fa-edit"></i></a>
 						
                             <a th:onclick="'javascript:confirmarEliminar(\''+${cli.nroDocumento}+'\');'"><i class="fa fa-trash-alt"></i></a>
 						</td>

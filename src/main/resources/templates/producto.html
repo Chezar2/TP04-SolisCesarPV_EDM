@@ -19,10 +19,12 @@
 		<div class="mb-3">
 			<label for="codigo">Codigo</label> 
 			<input type="number"	id="codigo" th:field="*{codigo}"class="form-control">
+			<div class="alert alert-danger" th:if="${#fields.hasErrors('codigo')}" th:errors="*{codigo}">Name	Error</div>
 		</div>
 		<div class="mb-3">
 			<label for="nombre"class="form-check-label">Nombre</label> 
 			<input type="text"	id="nombre" th:field="*{nombre}"class="form-control">
+			<div class="alert alert-danger" th:if="${#fields.hasErrors('nombre')}" th:errors="*{nombre}">Name	Error</div>
 		</div>
 		<div class="mb-3">
             <label for="precio"class="form-check-label">Precio</label> 

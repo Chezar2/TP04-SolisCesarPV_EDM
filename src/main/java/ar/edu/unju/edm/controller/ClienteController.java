@@ -58,14 +58,14 @@ public class ClienteController {
 
 	@PostMapping("/cliente/guardar")
 	public String guardarNuevoProducto(@Valid @ModelAttribute("unCliente") Cliente nuevoCliente,BindingResult resultado, Model model) {
-		
+		LOGGER.info("METHOD: ingresando a Guardar");
 	if (resultado.hasErrors())
 	{
 		model.addAttribute("unCliente",nuevoCliente);
 		model.addAttribute("clientes", clienteService.obtenerTodosClientes());
 	return ("cliente");
 	}
-	else {LOGGER.info("METHOD: ingresando a Guardar");
+	else {
 	//deberia haber try
 	clienteService.guardarCliente(nuevoCliente);		
 		LOGGER.info("Tamaño del Listado: "+ clienteService.obtenerTodosClientes().size());
@@ -76,9 +76,10 @@ public class ClienteController {
 	
 	@PostMapping("/cliente/modificar")
 	public String modificarCliente(@ModelAttribute("unCliente") Cliente clienteModificado, Model model) {
-		LOGGER.info("METHOD: ingresando el metodo modificar");
-		try {
+	
+		try {	LOGGER.info("METHOD: ingresando el metodo modificar 1"+clienteModificado.getIdCliente());
 			clienteService.modificarCliente(clienteModificado);
+			LOGGER.info("METHOD: ingresando el metodo modificar 2");
 			model.addAttribute("unCliente", new Cliente());
 			model.addAttribute("editMode", "false");
 		}

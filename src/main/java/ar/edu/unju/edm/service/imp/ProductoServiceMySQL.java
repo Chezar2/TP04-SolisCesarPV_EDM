@@ -63,5 +63,10 @@ public class ProductoServiceMySQL implements ProductoService{
 		// TODO Auto-generated method stub
 		return null;
 	}
+	@Override
+	public Producto obtenerProductoCodigo(Integer codigo) {
+		// TODO Auto-generated method stub
+		return productoDAO.findById(codigo).orElseThrow();
+	}
     
 }
