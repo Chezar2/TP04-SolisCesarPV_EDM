@@ -12,7 +12,7 @@ public interface ProductoService {
 	public Producto obtenerProductoCodigo(Integer codigo);
 	public Producto crearProducto();
 	public void modificarProducto(Producto productoModificado) throws Exception;
-	public void eliminarProducto(Producto productoAEliminar);
+	public void eliminarProducto(int codigo) throws Exception;
 	public Producto obtenerProducto(String nombreProducto);
 	public List<Producto> obtenerTodoProducto();
 	public Producto obtenerProductoNuevo();

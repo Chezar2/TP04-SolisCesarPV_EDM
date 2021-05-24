@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
+import ar.edu.unju.edm.model.Cliente;
 import ar.edu.unju.edm.model.Producto;
 import ar.edu.unju.edm.repository.IProductoDAO;
 import ar.edu.unju.edm.service.ProductoService;
@@ -37,8 +38,12 @@ public class ProductoServiceMySQL implements ProductoService{
 	
 	}
 	@Override
-	public void eliminarProducto(Producto productoAEliminar) {
+	public void eliminarProducto(int codigo) throws Exception{
 		// TODO Auto-generated method stub
+		System.out.println("------------entrando a eliminar---------");
+		Producto productoAEliminar = productoDAO.findById(codigo).orElseThrow(()->new Exception("El producto no fue encontrado"));
+		System.out.println("------------entrando a borrar---------");
+		productoDAO.delete(productoAEliminar);
 		
 	}
 	@Override

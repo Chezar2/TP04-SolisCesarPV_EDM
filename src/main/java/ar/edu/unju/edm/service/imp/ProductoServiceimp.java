@@ -26,13 +26,6 @@ public class ProductoServiceimp implements ProductoService {
 	}
 
 
-
-	@Override
-	public void eliminarProducto(Producto productoAEliminar) {
-		// TODO Auto-generated method stub
-		
-	}
-
 	@Override
 	public Producto obtenerProducto(String nombreProducto) {
 		// TODO Auto-generated method stub
@@ -94,6 +87,14 @@ public class ProductoServiceimp implements ProductoService {
 	public Producto obtenerProductoCodigo(Integer codigo) {
 		// TODO Auto-generated method stub
 		return null;
+	}
+
+
+
+	@Override
+	public void eliminarProducto(int codigo) throws Exception {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

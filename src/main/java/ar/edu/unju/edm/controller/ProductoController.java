@@ -67,8 +67,6 @@ public String editarProducto(Model model, @PathVariable(name="codigo") int codig
 		return("redirect:/producto/mostrar");}
 	}
 	
-	
-	
 	@PostMapping("/producto/modificar")
 	public String modificarProducto(@ModelAttribute("unProducto") Producto productoModificado, Model model) {
 		LOGGER.info("METHOD: ingresando el metodo modificar");
@@ -87,17 +85,30 @@ public String editarProducto(Model model, @PathVariable(name="codigo") int codig
 		model.addAttribute("productos", iProductoService.obtenerTodoProducto());
 		return ("producto");
 	}
-/*
-	@GetMapping("/ultimo")
-	public String cargarUltimoProducto(Model model) {
-		model.addAttribute("ultimoProducto", iProductoService.obtenerUltimoProducto());
-		return("mostrar-ultimo");
+
+	
+
+	@GetMapping("/cancelar")
+	public String cancelar() {
+		return "redirect:/producto/mostrar";
 	}
-	@GetMapping("/volver")
-	public String cargarNuevoProducto(Model model) {
-		return("redirect:/producto");
+	
+	
+	//modal peticiones
+	@GetMapping("/producto/eliminarProducto/{codigo}")
+	public String eliminarCliente(Model model, @PathVariable(name="codigo") int codigo) {		
+		System.out.println("------------entrnado a controller 1---------");
+		try {			System.out.println("------------intentando eliminar---------");
+		                iProductoService.eliminarProducto(codigo);
+		              
+		}
+		catch(Exception e){
+			model.addAttribute("listErrorMessage",e.getMessage());
+		}			
+		return "redirect:/producto/mostrar";
 	}
-	*/
+	
+	
 
 }
 

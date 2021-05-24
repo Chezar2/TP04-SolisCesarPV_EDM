@@ -93,12 +93,7 @@ public class ClienteController {
 		model.addAttribute("clientes", clienteService.obtenerTodosClientes());
 		return ("cliente");
 	}
-	
-	
-	@GetMapping("/cancelar")
-	public String cancelar() {
-		return "redirect:/cliente/mostrar";
-	}
+
 	
 	
 	//modal peticiones
