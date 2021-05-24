@@ -28,13 +28,16 @@
 				</div>
 
 				<div class="mb-3">
-					<label for="tipo" class="form-check-inline">Tipo de Documento*: </label>
-					<input type="radio" name="tipo" value="DNI" id="tipo" th:field="*{tipoDocumento}"
-						class="form-check-input"><span>DNI</span>
-					<input type="radio" name="tipo" value="Pasaporte" id="tipo" th:field="*{tipoDocumento}"
-						class="form-check-input"><span>Pasaporte</span>
-
+				<div class="form-check form-check-inline">
+					<input type="radio" name="tipo" value="DNI" id="tipo" th:field="*{tipoDocumento}" class="form-check-input">
+					<label for="tipo" class="form-check-label ">DNI</label>
 				</div>
+				</div>
+				<div class="form-check form-check-inline">	
+				  <input type="radio" name="tipo" value="Pasaporte" id="tipo" th:field="*{tipoDocumento}"	class="form-check-input">
+                  <label for="tipo" class="form-check-label ">Pasaporte </label>
+				</div>
+	
 
 				<div class="mb-3">
 					<label for="numdoc" class="form-check-label">Nro de Documento*:</label>
@@ -123,7 +126,7 @@
 							<a href="#" th:href="@{'/cliente/editar/'+${cli.getIdCliente}}"> <i
 									class="fa fa-edit"></i></a>
 						
-                            <a th:onclick="'javascript:confirmarEliminar(\''+${cli.nroDocumento}+'\');'"><i class="fa fa-trash-alt"></i></a>
+                            <a th:onclick="'javascript:confirmarEliminar(\''+${cli.getIdCliente}+'\');'"><i class="fa fa-trash-alt"></i></a>
 						</td>
 					</tr>
 				</table>
@@ -147,7 +150,7 @@
 					<h6>¿Seguro de que quieres eliminar a este Cliente?</h6>
 				</div>
 
-				<input type="hidden" id="identificadorClienteHiddenInput" name="userIdHiddenInput" />
+				<input type="hidden" id="identificadorClienteHiddenInput" name="userIdHiddenInput">
 				<div class="modal-footer">
 					<button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
 
@@ -167,8 +170,8 @@
 
 		function eliminarCliente() {
 			var id =
-				$("identificadorClienteHiddenInput").val();
-			window.location = "eliminarCliente/" + id;
+				$("#identificadorClienteHiddenInput").val();
+			window.location = "eliminarCliente/"+id;
 		}
 	</script>
 

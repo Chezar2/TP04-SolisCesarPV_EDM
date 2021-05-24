@@ -94,8 +94,15 @@ public class ClienteController {
 		return ("cliente");
 	}
 	
+	
+	@GetMapping("/cancelar")
+	public String cancelar() {
+		return "redirect:/cliente/mostrar";
+	}
+	
+	
 	//modal peticiones
-	@GetMapping("/cliente/eliminarCliente/{id}")
+	@GetMapping("/cliente/eliminarCliente/{idCliente}")
 	public String eliminarCliente(Model model, @PathVariable(name="idCliente") int id) {		
 		try {			clienteService.eliminarCliente(id);			
 		}
