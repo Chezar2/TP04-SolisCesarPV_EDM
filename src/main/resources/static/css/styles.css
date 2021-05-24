@@ -16,7 +16,7 @@ background-image: url(/img/llama.jpg);
 .todo-index{
 	display: blocK;
 	text-align: center;
-	margin-bottom: 4cm;
+	margin-bottom: 7cm;
 	margin-top: 2cm;
 }
 .formulario-home{
@@ -128,9 +128,9 @@ label{
 		opacity: 80%;
 	transition: .3s;	
 }
-.dropdown ul {
+.dropdown-menu {
  	background-color: #0A0A22;
- 	transition: .4s;
+ 	transition: .2s;
 }
 
 .pie{

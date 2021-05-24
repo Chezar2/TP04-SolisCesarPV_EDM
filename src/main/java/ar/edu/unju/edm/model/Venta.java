@@ -23,13 +23,13 @@ public class Venta {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column
 	private Integer idVenta;
-	@Column
+
 	@ManyToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name = "idProducto")
     private Producto producto;
-	@Column
+
 	@ManyToOne(cascade = CascadeType.ALL)//cascade -> afecta a todo
-	@JoinColumn(name = "idCliente")
+    @JoinColumn(name = "idCliente")
     private Cliente cliente;
 	@Column
 	@DateTimeFormat(pattern = "yyyy-MM-dd")
@@ -67,6 +67,5 @@ public Integer getCantProductos() {
 public void setCantProductos(Integer cantProductos) {
 	this.cantProductos = cantProductos;
 }
-
-
 }
+
