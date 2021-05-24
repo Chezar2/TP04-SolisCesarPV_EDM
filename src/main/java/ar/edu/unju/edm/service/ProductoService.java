@@ -11,12 +11,12 @@ public interface ProductoService {
 	public void guardarProducto(Producto unProducto);
 	public Producto obtenerProductoCodigo(Integer codigo);
 	public Producto crearProducto();
-	public void modificarProducto(Producto productoModificado);
+	public void modificarProducto(Producto productoModificado) throws Exception;
 	public void eliminarProducto(Producto productoAEliminar);
 	public Producto obtenerProducto(String nombreProducto);
 	public List<Producto> obtenerTodoProducto();
 	public Producto obtenerProductoNuevo();
-	public Producto encontrarUnProducto(int codigo);
+	public Producto encontrarUnProducto(int codigo) throws Exception;
 	public Producto obtenerUltimoProducto();
 
 }
