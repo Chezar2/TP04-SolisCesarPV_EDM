@@ -84,14 +84,37 @@ span{
 	margin-left: 3px;
 }
 label{
-	color: #FFFFFF;
+	color: #fff;
 	 font-size: 20px;
+}
+
+.modal-body form div label{
+		color: #333;
+	 font-size: 20px;
+}
+.modal-footer, .modal-header{
+	background-color: #2A2B40;
+	color: white;
 }
 .formulario{
 	display: block;
 	 padding: 10px;	
 	margin: 1cm auto;
 	text-align: center;
+}
+.cancelar{
+	border:0;
+    background:none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid gray;
+    padding: 14px 40px;
+    outline: none;
+	color: white;
+	border-radius: 24px;
+    transition: 0.25s;
+	cursor: pointer;
 }
 .agregar{
 	border:0;
@@ -104,10 +127,13 @@ label{
     outline: none;
 	color: white;
 	border-radius: 24px;
-
     transition: 0.25s;
-	
 	cursor: pointer;
+}
+.cancelar:hover{
+	background-color:#909497;
+	color: black;
+transition: .2s;
 }
 .agregar:hover{
 	background-color:#2ecc71;
