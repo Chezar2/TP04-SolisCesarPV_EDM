@@ -59,6 +59,7 @@ background-image: url(/img/llama.jpg);
    font-size: 20px;
    color:white;
 }
+
 .form-control{
    display: block;
    margin: 15px auto;
@@ -82,6 +83,7 @@ background-image: url(/img/llama.jpg);
 }
 span{
 	margin-left: 3px;
+	
 }
 label{
 	color: #fff;
@@ -172,6 +174,7 @@ transition: .2s;
 	background-color: whitesmoke;
 
 }
+
 
 .carta{
 	margin-top: 1cm;

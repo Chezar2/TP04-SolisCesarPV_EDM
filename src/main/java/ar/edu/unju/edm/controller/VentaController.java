@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 import ar.edu.unju.edm.model.Producto;
 import ar.edu.unju.edm.model.Venta;
+import ar.edu.unju.edm.service.IClienteService;
 import ar.edu.unju.edm.service.IVentaService;
 import ar.edu.unju.edm.service.ProductoService;
 
@@ -18,6 +19,10 @@ public class VentaController {
 	@Autowired
 	@Qualifier("impmysqlproducto")
 	ProductoService iProductoService;
+	
+	@Autowired
+	@Qualifier("impmysql")
+	IClienteService iClienteService;
 	
 	@Autowired
 	Producto productoSeleccionado;
@@ -39,6 +44,7 @@ public class VentaController {
 			venta = iVentas.crearVenta();		
 			venta.setProducto(productoSeleccionado);
 			model.addAttribute("venta",venta);
+			model.addAttribute("clientes", iClienteService.obtenerTodosClientes());
 		}
 		catch (Exception e) {
 			model.addAttribute("formUsuarioErrorMessage",e.getMessage());		
