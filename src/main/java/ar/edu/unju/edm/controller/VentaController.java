@@ -53,6 +53,7 @@ public class VentaController {
 		}		
 		return "modal-venta";
 	}
+	
 	@PostMapping("/producto/vender")
 	public String guardarNuevoProducto(@ModelAttribute("venta") Venta unaVenta, Model model){
 		iVentas.guardarVenta(unaVenta);
