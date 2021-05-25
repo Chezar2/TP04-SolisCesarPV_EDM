@@ -5,7 +5,9 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 
 import ar.edu.unju.edm.model.Producto;
 import ar.edu.unju.edm.model.Venta;
@@ -50,6 +52,11 @@ public class VentaController {
 			model.addAttribute("formUsuarioErrorMessage",e.getMessage());		
 		}		
 		return "modal-venta";
+	}
+	@PostMapping("/producto/vender")
+	public String guardarNuevoProducto(@ModelAttribute("venta") Venta unaVenta, Model model){
+		iVentas.guardarVenta(unaVenta);
+		return("redirect:/producto/ventas");
 	}
 
 }

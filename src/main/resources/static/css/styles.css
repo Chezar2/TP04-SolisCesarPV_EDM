@@ -54,7 +54,7 @@ background-image: url(/img/llama.jpg);
     border-radius: .2rem;
     transition: 0.25s;
 }
-.mb-3 span,input, select{
+span,input, select{
 
    font-size: 20px;
    color:white;
