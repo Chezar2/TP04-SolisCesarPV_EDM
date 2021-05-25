@@ -12,8 +12,10 @@ import ar.edu.unju.edm.service.IVentaService;
 public class VentasServiceMySQL  implements IVentaService{
 @Autowired
 Venta venta;
+
 @Autowired
 IVentaDAO iVentaDAO;
+
 	@Override
 	public void guardarVenta(Venta unaVenta) {
 		// TODO Auto-generated method stub
