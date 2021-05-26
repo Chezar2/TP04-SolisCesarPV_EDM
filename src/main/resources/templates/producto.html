@@ -41,7 +41,13 @@
 
 		<div>
 			<!--<button type="submit" value="Agregar"  class="btn agregar">Agregar <span><i class="far fa-paper-plane"></i></span></button> -->
-			<input type="submit" class=" agregar" th:value="${editMode}?'Modificar Producto':'Agregar Producto'">
+			<div class="col-sm-12 col-lg-12">		
+			     <input type="submit" class=" agregar" th:value="${editMode}?'Modificar Producto':'Agregar Producto'">
+			</div>
+		    <div class="col-sm-12 col-lg-12">				
+				<a class="cancelar" th:href="@{'/producto/cancelar'}">Cancelar</a>				
+			</div>
+		
 		</div>
 
 	</form>

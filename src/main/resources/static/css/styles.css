@@ -106,6 +106,7 @@ label{
 }
 .cancelar{
 	border:0;
+	
     background:none;
     display: block;
     margin: 20px auto;
@@ -134,6 +135,7 @@ label{
 }
 .cancelar:hover{
 	background-color:#909497;
+	text-decoration: none;
 	color: black;
 transition: .2s;
 }

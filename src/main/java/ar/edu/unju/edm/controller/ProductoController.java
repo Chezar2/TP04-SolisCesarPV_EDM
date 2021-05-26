@@ -88,7 +88,7 @@ public String editarProducto(Model model, @PathVariable(name="codigo") int codig
 
 	
 
-	@GetMapping("/cancelar")
+	@GetMapping("/producto/cancelar")
 	public String cancelar() {
 		return "redirect:/producto/mostrar";
 	}
