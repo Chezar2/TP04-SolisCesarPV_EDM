@@ -28,7 +28,10 @@ public class ClienteController {
 	@Qualifier("OtraImp")
 	IClienteService otroCslienteService;
 	*/
-
+	
+	
+	//UserDetails userCliente = (UserDetails) authentication.getPrincipal();
+			//System.out.println(userCliente.getUsername());
 	
 	@GetMapping("/cliente/mostrar")
 	public String cargarCliente(Model model) {
