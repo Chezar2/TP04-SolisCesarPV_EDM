@@ -9,6 +9,6 @@ public class HomeController {
 
 	@GetMapping({"/","/login","/home", "/index","/login?error=true"})
 	public String cargarHome(Model model){	
-	return "login";
+	return "index";
 	}
 }

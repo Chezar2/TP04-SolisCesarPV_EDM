@@ -25,12 +25,12 @@ public class LogInCliente implements UserDetailsService {
 	public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
 		// TODO Auto-generated method stub
 
-		
+		System.out.println("impppppppppppppppppppppppp"+email);
 			// TODO Auto-generated method stub
 			// da detalles de un usuario
 			Cliente clienteEncontrado = clienteDAO.findByEmail(email)
 					.orElseThrow(() -> new UsernameNotFoundException("Cliente inválido"));
-
+			System.out.println("impsssssssssssssssssssss");
 			List<GrantedAuthority> tipos = new ArrayList<>();
 			GrantedAuthority grantedAuthority = new SimpleGrantedAuthority(clienteEncontrado.getTipoDocumento());
 			tipos.add(grantedAuthority);

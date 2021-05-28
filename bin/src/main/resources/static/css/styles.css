@@ -1,0 +1,198 @@
+
+.producto, .ventas{
+		 background-color: #2A2B40;
+}
+.cliente{
+	background-image: url(/img/24269.jpg);
+	background-repeat: no-repeat;
+	background-attachment: fixed;	
+
+}
+.index{
+background-image: url(/img/llama.jpg);
+	background-repeat: no-repeat;
+	background-attachment: fixed;	
+	
+}
+.todo-index{
+	display: blocK;
+	text-align: center;
+	margin-bottom: 7cm;
+	margin-top: 2cm;
+}
+.formulario-home{
+  display: block; 
+  color: white;
+  border-radius: 1.2rem;
+}
+.formulario-home form button,.formulario-home form div input{
+	margin: 15px auto;
+}
+.titulo-inicio{
+
+	color: white;
+	display: block;
+	text-align: center;
+    padding: 10px;
+    margin-top: 10px;
+}
+.titulo{
+	color: white;
+	background-color: #41B783 ;
+	display: block;
+	text-align: center;
+    padding: 20px;
+    margin-top: 10px;
+    border-radius: .5rem;
+}
+.sub-titulo{
+	color: white;
+	background-color: #41B783 ;
+	display: block;
+	text-align: center;
+    padding: 15px;
+    margin-top: 30px;
+    border-radius: .2rem;
+    transition: 0.25s;
+}
+span,input, select{
+
+   font-size: 20px;
+   color:white;
+}
+
+.form-control{
+   display: block;
+   margin: 15px auto;
+	background-color: #2A2B40;
+	color: white;
+	width: 200px;
+	padding: 14px 10px;
+	text-align: center;
+	outline: none;
+	border: 2px solid white;
+	border-radius: 24px;
+}
+.form-control:focus{
+	transition: .2s;
+	width: 280px;
+   color: white;
+   	background-color: #2A2B40;
+   border-color: #2ecc71;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgb(0, 0, 0.092);
+
+}
+span{
+	margin-left: 3px;
+	
+}
+label{
+	color: #fff;
+	 font-size: 20px;
+}
+
+.modal-body form div label{
+		color: #333;
+	 font-size: 20px;
+}
+.modal-footer, .modal-header{
+	background-color: #2A2B40;
+	color: white;
+}
+.formulario{
+	display: block;
+	 padding: 10px;	
+	margin: 1cm auto;
+	text-align: center;
+}
+.cancelar{
+	border:0;
+	
+    background:none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid gray;
+    padding: 14px 40px;
+    outline: none;
+	color: white;
+	border-radius: 24px;
+    transition: 0.25s;
+	cursor: pointer;
+}
+.agregar{
+	border:0;
+    background:none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #2ecc71;
+    padding: 14px 40px;
+    outline: none;
+	color: white;
+	border-radius: 24px;
+    transition: 0.25s;
+	cursor: pointer;
+}
+.cancelar:hover{
+	background-color:#909497;
+	text-decoration: none;
+	color: black;
+transition: .2s;
+}
+.agregar:hover{
+	background-color:#2ecc71;
+	transition: .2s;
+}
+.cabeza{
+	background-color: #0A0A22 ; 
+	  padding: .4cm;
+}
+.cabeza a{
+	color: #FFF;
+	transition: .1s;
+	font-size: 17px;
+}
+.cabeza a:hover{
+		color: #FFF;
+	background-color: #414255;
+		opacity: 80%;
+	transition: .3s;	
+}
+.dropdown-menu {
+ 	background-color: #0A0A22;
+ 	transition: .2s;
+}
+
+.pie{
+	background-color:#0A0A22;
+  	padding: .6cm;
+    height: 3cm;
+    color: white;
+    margin-top: 1cm;
+      bottom: 0;
+}
+
+.table{
+	background-color: whitesmoke;
+
+}
+
+
+.carta{
+	margin-top: 1cm;
+	background-color: #333;
+	color: white;
+	border-color: gray;
+}
+.carta-boton{
+	background-color: #27AE60;
+	transition: .1s;
+	font-size: 20px;
+	}
+.carta-boton:hover{
+	background-color: rgb(66, 213, 129);
+	font-size: 22px;
+	transition: .2s;
+	opacity: 90%;
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<body>
+<div id="header" th:fragment="header">
+<ul class="navbar justify-content-center">
+  <li class="nav-item">
+ <a class="nav-link" href="/">Home<span><i class="fas fa-home"></i></span></a>
+  </li>
+  <li class="nav navbar-item">
+    <a class="nav-link" href="/cliente/mostrar">Cliente<span><i class="fas fa-user-circle"></i></span></a>
+  </li>  
+   <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Producto<span><i class="fas fa-store"></i></span>
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="/producto/ventas">Ventas</a>
+          
+         
+          <div class="dropdown-divider"></div>
+ <a class="dropdown-item" href="/producto/mostrar">Agregar Producto</a>
+        </div>
+      </li>
+  
+  
+</ul>
+<ul class="navbar-nav mt-2 mt-lg-0">
+				<li class="nav-item">
+				<a class="btn btn-outline-dark" href="#" th:href="@{/logout}"> 
+				<span th:text="${#authentication.getPrincipal().getUsername()}">
+				</span> - 
+				<span> Salir  </span><span class="float-right">
+				<i class="fas fa-sign-out-alt"></i></span></a>				   	
+				</li>
+				</ul>
+</div>
+</body>
+</html>

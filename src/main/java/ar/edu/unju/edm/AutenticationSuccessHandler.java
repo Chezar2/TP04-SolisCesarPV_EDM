@@ -12,7 +12,9 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.web.DefaultRedirectStrategy;
 import org.springframework.security.web.RedirectStrategy;
 import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
+import org.springframework.stereotype.Component;
 
+@Component
 public class AutenticationSuccessHandler implements AuthenticationSuccessHandler{
 	private RedirectStrategy redirectStrategy = new DefaultRedirectStrategy();
 	@Override
@@ -26,7 +28,9 @@ public class AutenticationSuccessHandler implements AuthenticationSuccessHandler
 		Collection<? extends GrantedAuthority> authorities = authentication.getAuthorities();
 
 		for (GrantedAuthority grantedAuthority : authorities) {
+			System.out.println("ffffffffffffffffffff");
 			if (grantedAuthority.getAuthority().equals("DNI")) {
+				System.out.println("iiiiiiiiiiiiiiiiiiff");
 				DNI = true;
 				break;
 			} else {
@@ -40,7 +44,8 @@ public class AutenticationSuccessHandler implements AuthenticationSuccessHandler
 			}
 	
 	}
-		if (DNI) {
+		if (DNI) {  
+			System.out.println("aaaaaaaaaaaaaaaaaaaaaaa");
 			redirectStrategy.sendRedirect(request, response, "/cliente/mostrar");
 		} else {
 			if (userConsultor) {
