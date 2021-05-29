@@ -26,18 +26,18 @@ public class Tp4SolisCesaRedmApplication implements CommandLineRunner{
 	
 	@Override
 	public void run(String... args) throws Exception {
-		/*
-		//		// TODO Auto-generated method stub
+
+		// TODO Auto-generated method stub
 //inicializo un cliente para pruebas
+		/*
 				cliente.setNroDocumento(100);
 				cliente.setNombreApellido("user");
 				cliente.setTipoDocumento("DNI");
 				cliente.setEmail("correo@gmail.com");
 				cliente.setFechaNacimiento(LocalDate.now());
 				cliente.setFechaUltimaCompra(LocalDate.now());
-				cliente.setPassword("123456");				
-//				
+				cliente.setPassword("123456");						
 				clienteService.guardarCliente(cliente);
-*/		
+		*/
 	}
 }

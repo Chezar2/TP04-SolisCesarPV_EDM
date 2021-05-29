@@ -4,14 +4,20 @@
 }
 .cliente{
 	background-image: url(/img/24269.jpg);
+	background-position: center center;
 	background-repeat: no-repeat;
-	background-attachment: fixed;	
+	background-attachment: fixed;
+	background-size: cover;
+	
 
 }
 .index{
-background-image: url(/img/llama.jpg);
+    background-image: url(/img/llama.jpg);
+    background-position: center center;
 	background-repeat: no-repeat;
-	background-attachment: fixed;	
+	background-attachment: fixed;
+	background-size: cover;
+		
 	
 }
 .todo-index{
@@ -27,6 +33,9 @@ background-image: url(/img/llama.jpg);
 }
 .formulario-home form button,.formulario-home form div input{
 	margin: 15px auto;
+}
+.formulario{
+	text-align: center;
 }
 .titulo-inicio{
 
@@ -66,20 +75,21 @@ span,input, select{
    margin: 15px auto;
 	background-color: #2A2B40;
 	color: white;
-	width: 200px;
+	width: 340px;
+	height:40px;
 	padding: 14px 10px;
 	text-align: center;
 	outline: none;
-	border: 2px solid white;
-	border-radius: 24px;
+	border: 1.3px solid white;
+	border-radius: 10px;
 }
 .form-control:focus{
-	transition: .2s;
-	width: 280px;
+   transition: .4s;
+   width: 390px;
    color: white;
-   	background-color: #2A2B40;
-   border-color: #2ecc71;
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgb(0, 0, 0.092);
+   background-color: #2A2B40;
+   border: 1.5px solid #2ecc71;
+   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgb(0, 0, 0.092);
 
 }
 span{
@@ -92,22 +102,19 @@ label{
 }
 
 .modal-body form div label{
-		color: #333;
+	 color: #333;
 	 font-size: 20px;
 }
 .modal-footer, .modal-header{
 	background-color: #2A2B40;
 	color: white;
 }
-.formulario{
-	display: block;
-	 padding: 10px;	
-	margin: 1cm auto;
-	text-align: center;
-}
+
 .cancelar{
+
+	   width: 200px;
+	   font-size: 20px;
 	border:0;
-	
     background:none;
     display: block;
     margin: 20px auto;
@@ -177,7 +184,6 @@ transition: .2s;
 	background-color: whitesmoke;
 
 }
-
 
 .carta{
 	margin-top: 1cm;

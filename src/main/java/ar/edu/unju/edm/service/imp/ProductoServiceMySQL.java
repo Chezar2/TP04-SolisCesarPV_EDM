@@ -40,9 +40,10 @@ public class ProductoServiceMySQL implements ProductoService{
 	@Override
 	public void eliminarProducto(int codigo) throws Exception{
 		// TODO Auto-generated method stub
-		System.out.println("------------entrando a eliminar---------");
+		System.out.println("------------entrando a eliminar en imp---------"+codigo);
 		Producto productoAEliminar = productoDAO.findById(codigo).orElseThrow(()->new Exception("El producto no fue encontrado"));
-		System.out.println("------------entrando a borrar---------");
+		System.out.println("------------entrando a borrar---------"+codigo);
+		System.out.println("codigo de productoAEliminar: "+productoAEliminar.getCodigo());
 		productoDAO.delete(productoAEliminar);
 		
 	}

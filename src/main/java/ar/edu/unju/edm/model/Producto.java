@@ -40,7 +40,7 @@ public class Producto {
 	
 	//descripcion 
 	public Producto() {
-		super();
+//		super();
 		// TODO Auto-generated constructor stub
 	}
 	

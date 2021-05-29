@@ -16,84 +16,89 @@
 	<div th:insert="layout/header :: header" class="cabeza"></div>
 	<div class="container">
 		<h2 class="titulo">Formulario de Carga de Cliente</h2>
-
-		<div class="form-group formulario col-lg-6 col-md-6 col-sm-8 col-xs-12">
-			<form id="formProducto" th:object="${unCliente}"
+	<form id="formProducto" th:object="${unCliente}"
 				th:action="${editMode}?@{/cliente/modificar}:@{/cliente/guardar}" method="post">
-		<input type="hidden" th:field="*{idCliente}"th:if="${editMode}">
-				<div class="mb-3">
+		<div class="form-row formulario">
+						
+				<div class="form-group col-lg-12 col-md-12 col-sm-8 col-xs-12">
+				    <input type="hidden" th:field="*{idCliente}"th:if="${editMode}">
+				
 					<label for="nombreA" class="form-check-label">Nombre y Apellido*: </label>
 					<input type="text" id="nombreApellido" th:field="*{nombreApellido}" class="form-control">
 					<div class="alert alert-danger" th:if="${#fields.hasErrors('nombreApellido')}" th:errors="*{nombreApellido}">Name	Error</div>
 				</div>
-
-				<div class="mb-3">
+				
+				<div class="form-group col-lg-6 col-md-6 col-sm-8 col-xs-12">
+					<label for="fechanac" class="form-check-label">Fecha de Nacimiento: </label>
+					<input type="date" id="fechanac" th:field="*{fechaNacimiento}" class="form-control">
+				</div>
+				
+				<div class="form-group col-lg-6 col-md-6 col-sm-8 col-xs-12">
+				<br><br>
 				<div class="form-check form-check-inline">
 					<input type="radio" name="tipo" value="DNI" id="tipo" th:field="*{tipoDocumento}" class="form-check-input">
 					<label for="tipo" class="form-check-label ">DNI</label>
 				</div>
-				</div>
+			
 				<div class="form-check form-check-inline">	
 				  <input type="radio" name="tipo" value="Pasaporte" id="tipo" th:field="*{tipoDocumento}"	class="form-check-input">
                   <label for="tipo" class="form-check-label ">Pasaporte </label>
 				</div>
-	
+		</div>
 
-				<div class="mb-3">
+				<div class="form-group col-lg-6 col-md-6 col-sm-8 col-xs-12">
 					<label for="numdoc" class="form-check-label">Nro de Documento*:</label>
 					<input type="number" id="numdoc" th:field="*{nroDocumento}" class="form-control">
 					<div class="alert alert-danger" th:if="${#fields.hasErrors('nroDocumento')}" th:errors="*{nroDocumento}">Name	Error</div>
 				</div>
 
-				<div class="mb-3">
-					<label for="fechanac" class="form-check-label">Fecha de Nacimiento: </label>
-					<input type="date" id="fechanac" th:field="*{fechaNacimiento}" class="form-control">
-				</div>
 
-				<div class="mb-3">
-					<label for="fechaU" class="form-check-label">Fecha de Ultima Compra: </label>
-					<input type="date" id="fechaU" th:field="*{fechaUltimaCompra}" class="form-control">
-				</div>
-
-				<div class="mb-3">
+				<div class="form-group col-lg-6 col-md-6 col-sm-8 col-xs-12">
 					<label for="email" class="form-check-label">E-mail*: </label>
 					<input type="email" id="email" th:field="*{email}" class="form-control">
 				</div>
 
-				<div class="mb-3">
+				<div class="form-group col-lg-6 col-md-6 col-sm-8 col-xs-12">
 					<label for="password" class="form-check-label">Contraseña*: </label>
 					<input type="password" id="tipo" th:field="*{password}" class="form-control">
 				</div>
 
-				<div class="mb-3">
+				<div class="form-group col-lg-6 col-md-6 col-sm-8 col-xs-12">
 					<label for="codigo" class="form-label">Codigo de Area: </label>
-					<select id="codigo" th:field="*{codigoAreaTelefono}" class="form-select form-control">
-						<option value="388"><span>388</span></option>
-						<option value="351"><span>351</span></option>
-						<option value="11"><span>11</span></option>
-						<option value="370"><span>370</span></option>
+					<select id="codigo" th:field="*{codigoAreaTelefono}" class="form-control">
+						<option value="388">388</option>
+						<option value="351">351</option>
+						<option value="11">11</option>
+						<option value="370">370</option>
 					</select>
 				</div>
 
-				<div class="mb-3">
+				<div class="form-group col-lg-6 col-md-6 col-sm-8 col-xs-12">
 					<label for="numtel" class="form-check-label">Telefono: </label>
 					<input type="number" id="numtel" th:field="*{numTelefono}" class="form-control">
 				</div>
-
-
-
-				<div>
-					<!--		<button type="submit" value="Agregar" class="btn agregar">Agregar <span><i class="far fa-paper-plane"></i></span></button>-->
-				 <div class="col-sm-12 col-lg-12">
-					<input type="submit" class="agregar" th:value="${editMode}?'Modificar Cliente':'Crear Cliente'">
-				 </div>
-			 <div class="col-sm-12 col-lg-12">				
-				<a class="cancelar" th:href="@{'/cliente/cancelar'}">Cancelar</a>				
-			</div>
+				
+				<div class="form-group col-lg-6 col-md-6 col-sm-8 col-xs-12">
+					<label for="fechaU" class="form-check-label">Fecha de Ultima Compra: </label>
+					<input type="date" id="fechaU" th:field="*{fechaUltimaCompra}" class="form-control">
 				</div>
 
-			</form>
+
+			<div class="form-group  col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
+					<!--		<button type="submit" value="Agregar" class="btn agregar">Agregar <span><i class="far fa-paper-plane"></i></span></button>-->
+				 <div class="form-group  col-lg-12  col-sm-12">
+					<input type="submit" class="agregar" th:value="${editMode}?'Modificar Cliente':'Crear Cliente'">
+				 </div>
+			    
+			     <div class="form-group  col-lg-12  col-sm-12 ">				
+				   <a class="cancelar" th:href="@{'/cliente/cancelar'}">Cancelar</a>				
+			    </div>
+			</div>
+				
 		</div>
+			</form>
+	
+		
 
 		<!-- ---------------------------------------------------------------- -->
 

@@ -98,7 +98,7 @@ public String editarProducto(Model model, @PathVariable(name="codigo") int codig
 	@GetMapping("/producto/eliminarProducto/{codigo}")
 	public String eliminarCliente(Model model, @PathVariable(name="codigo") int codigo) {		
 		System.out.println("------------entrnado a controller 1---------");
-		try {			System.out.println("------------intentando eliminar---------");
+		try {			System.out.println("------------enviando a eliminar desde controller---------"+codigo);
 		                iProductoService.eliminarProducto(codigo);
 		              
 		}
